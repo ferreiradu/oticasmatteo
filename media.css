@@ -1,0 +1,84 @@
+@media (min-width:768px){
+
+    .logo img {
+        height: 50px; /* ajusta conforme precisar */
+        width: auto;  /* mantém proporção da imagem */
+        display: block;
+      }
+
+    .banner{
+    padding:20px;
+    }
+    
+    .carousel{
+    max-width:1200px;
+    margin:auto;
+    }
+    
+    .seta{
+    width:45px;
+    height:45px;
+    }
+    
+    .dot{
+    width:12px;
+    height:12px;
+    }
+
+   
+    .historia-container {
+        display: flex;
+        align-items: flex-start;
+        gap: 30px;
+        padding: 50px 20px;
+        flex-wrap: wrap; /* importante para mobile */
+      }
+      
+      .historia-imagem {
+        flex: 1;
+        min-width: 300px; /* garante que não fique muito pequena */
+      }
+      
+      .historia-imagem img {
+        width: 100%;
+        border-radius: 10px; /* opcional, deixa mais elegante */
+        object-fit: cover;
+      }
+      
+      .historia-texto {
+        flex: 2;
+        min-width: 300px;
+      }
+      
+      .historia-texto h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+      
+      .historia-texto p {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 15px;
+      }
+
+
+    .footer-container{
+
+        flex-direction:row;
+        justify-content:space-between;
+        
+        }
+        
+        .footer-col{
+        
+        width:30%;
+        
+        }
+        
+        .footer{
+        
+        padding:60px 80px 30px;
+        
+        }
+    
+    }
