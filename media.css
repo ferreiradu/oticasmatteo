@@ -1,84 +1,255 @@
+/* ================================= */
+/* TABLET */
+/* ================================= */
+
 @media (min-width:768px){
 
-    .logo img {
-        height: 50px; /* ajusta conforme precisar */
-        width: auto;  /* mantém proporção da imagem */
-        display: block;
-      }
-
-    .banner{
-    padding:20px;
-    }
+    /* ================= HEADER ================= */
     
-    .carousel{
+    header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:15px 40px;
+    background:var(--cor-fundo);
     max-width:1200px;
     margin:auto;
     }
     
-    .seta{
-    width:45px;
-    height:45px;
+    /* esconder hamburguer */
+    
+    .menu-hamburguer{
+    display:none;
     }
     
-    .dot{
-    width:12px;
-    height:12px;
+    /* menu horizontal */
+    
+    .menu-lateral{
+    position:static;
+    width:auto;
+    height:auto;
+    background:none;
+    box-shadow:none;
+    display:flex;
+    align-items:center;
+    padding:0;
+    }
+    
+    .menu-lateral ul{
+    display:flex;
+    gap:25px;
+    align-items:center;
+    list-style:none;
+    padding:0;
+    margin:0;
+    }
+    
+    .menu-lateral li{
+    font-size:14px;
+    }
+    
+    .menu-lateral a{
+    text-decoration:none;
+    color:var(--cor-texto);
+    font-weight:500;
+    transition:.3s;
+    }
+    
+    .menu-lateral a:hover{
+    color:#c59d5f;
     }
 
    
-    .historia-container {
-        display: flex;
-        align-items: flex-start;
-        gap: 30px;
-        padding: 50px 20px;
-        flex-wrap: wrap; /* importante para mobile */
-      }
-      
-      .historia-imagem {
-        flex: 1;
-        min-width: 300px; /* garante que não fique muito pequena */
-      }
-      
-      .historia-imagem img {
-        width: 100%;
-        border-radius: 10px; /* opcional, deixa mais elegante */
-        object-fit: cover;
-      }
-      
-      .historia-texto {
-        flex: 2;
-        min-width: 300px;
-      }
-      
-      .historia-texto h2 {
-        font-size: 2rem;
-        margin-bottom: 20px;
-      }
-      
-      .historia-texto p {
-        font-size: 1rem;
-        line-height: 1.6;
-        margin-bottom: 15px;
-      }
 
-
+    .menu-logo{
+        display:none;
+        }
+        
+        
+    
+    /* logo */
+    
+    .logo img{
+    height:45px;
+    }
+    
+    
+    /* ================= BUSCA ================= */
+    
+    .busca{
+    padding:20px 40px;
+    }
+    
+    .busca input{
+    font-size:15px;
+    padding:14px 50px 14px 20px;
+    }
+    
+    
+    /* ================= BANNER ================= */
+    
+    .banner{
+    padding:20px 40px;
+    }
+    
+    .slide img{
+    border-radius:14px;
+    }
+    
+    
+    /* ================= CATEGORIAS ================= */
+    
+    .categoria{
+    padding:40px;
+    }
+    
+    .categoria h2{
+    font-size:22px;
+    margin-bottom:25px;
+    }
+    
+    .produto{
+    min-width:180px;
+    padding:15px;
+    }
+    
+    .produto p{
+    font-size:14px;
+    }
+    
+    
+    /* ================= PROMOÇÕES ================= */
+    
+    .promo{
+    padding:40px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+    }
+    
+    .promo h1{
+    grid-column:1/-1;
+    font-size:24px;
+    }
+    
+    .promo-produto{
+    margin:0;
+    }
+    
+    
+    /* ================= MAPA ================= */
+    
+    .mapa{
+    padding:40px;
+    }
+    
+    .mapa-container{
+    height:350px;
+    }
+    
+    
+    /* ================= FOOTER ================= */
+    
     .footer-container{
+    flex-direction:row;
+    justify-content:space-between;
+    text-align:left;
+    }
+    
+    .footer-col{
+    flex:1;
+    }
+    
+    }
+    
+    
+    /* ================================= */
+    /* DESKTOP */
+    /* ================================= */
+    
+    @media (min-width:1024px){
+    
+    /* HEADER */
+    
+    header{
+    padding:25px 80px;
+    max-width:1400px;
+    }
+    
+    
+    
+    /* BUSCA */
+    
+    .busca{
+    padding:20px 80px;
+    }
+    
+    
+    /* BANNER */
+    
+    .banner{
+        max-width:1000px;
+        margin:auto;
+        }
+        .carousel{
+            max-height:420px;
+            }
+            
+            .slide img{
+                height:420px;
+                object-fit:cover;
+                }
+    
+    .seta,
+    .seta-categoria{
+    display:none;
+    }
 
-        flex-direction:row;
-        justify-content:space-between;
-        
-        }
-        
-        .footer-col{
-        
-        width:30%;
-        
-        }
-        
-        .footer{
-        
-        padding:60px 80px 30px;
-        
-        }
+    
+    /* CATEGORIAS */
+    
+    .categoria{
+    padding:60px 80px;
+    }
+    
+    .produtos{
+    gap:25px;
+    }
+    
+    .produto{
+    min-width:200px;
+    }
+    
+    
+    /* PROMOÇÕES */
+    
+    .promo{
+    padding:60px 80px;
+    grid-template-columns:repeat(4,1fr);
+    }
+    
+    .promo h1{
+    grid-column:1/-1;
+    font-size:26px;
+    margin-bottom:30px;
+    }
+    
+    
+    /* MAPA */
+    
+    .mapa{
+    padding:60px 80px;
+    }
+    
+    .mapa-container{
+    height:420px;
+    }
+    
+    
+    /* FOOTER */
+    
+    .footer{
+    padding:60px 80px 30px;
+    }
     
     }
